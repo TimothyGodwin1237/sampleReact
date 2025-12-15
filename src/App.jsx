@@ -4,6 +4,7 @@ import "./App.css";
 import Contact from "./contact";
 import Layout from "./Layout";
 import Profile from "./Profile";
+import APIexample from "./APIexample";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Route path="/userAbout" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/profile/:userId" element={<Profile />} />
+        <Route path="/ApiExample" element={<APIexample />} />
       </Route>
     </Routes>
   );
