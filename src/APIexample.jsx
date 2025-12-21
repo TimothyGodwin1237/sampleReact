@@ -90,3 +90,9 @@ export default APIexample;
 // }
 
 // 2. Render GET API response in Table Structure
+
+// UpComing Class
+// 1. promises
+// 2. PUT and DELETE
+// 3. dynamic rendering of images from API
+// 4. GitHUb
