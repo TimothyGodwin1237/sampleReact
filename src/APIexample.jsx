@@ -77,3 +77,16 @@ export default APIexample;
 //     age: 20,
 //     city:'chennai'
 // }
+
+// Task
+
+//1. PUT API = https://jsonplaceholder.typicode.com/todos/89
+// payload
+// {
+//     "userId": 2,
+//     "title": "Class Tutorial",
+//     "completed": false,
+//     "city": "Chennai"
+// }
+
+// 2. Render GET API response in Table Structure
