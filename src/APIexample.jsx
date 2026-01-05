@@ -37,8 +37,41 @@ const APIexample = () => {
       });
   };
 
+  const handlePUTTodo = () => {
+    const payload = {
+      title: title,
+      userId: userId,
+    };
+    axios
+      .put(`https://jsonplaceholder.typicode.com/todos/${userId}`, payload)
+      .then((res) => {
+        console.log("SAVED : ", res);
+      })
+      .catch((err) => {
+        console.log("ERROR : ", err);
+      });
+  };
+
+  const handleDELETETodo = async () => {
+    try {
+      const result = await axios.delete(
+        `https://jsonplaceholder.typicode.com/todos/${userId}`
+      );
+      console.log("result : ", result);
+    } catch (err) {
+      console.log("err : ", err);
+    }
+  };
+
   useEffect(() => {
     handleFetchTodo();
+    // setTimeout(() => {
+    //   handleFetchTodo();
+    // }, 3000);
+
+    // setInterval(() => {
+    //   console.log("RUN");
+    // }, 3000);
   }, []);
 
   return (
@@ -48,6 +81,8 @@ const APIexample = () => {
       <input value={title} onChange={(e) => setTitle(e.target.value)} />
       <button onClick={() => handleFetchTodo()}>GET UserId</button>
       <button onClick={() => handlePOSTTodo()}>POST ToDo</button>
+      <button onClick={() => handlePUTTodo()}>PUT ToDo</button>
+      <button onClick={() => handleDELETETodo()}>DELETE ToDo</button>
 
       {toDoList.map((item, index) => (
         <div>
