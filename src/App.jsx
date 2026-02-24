@@ -7,6 +7,8 @@ import Profile from "./Profile";
 import APIexample from "./APIexample";
 import RHFExample from "./RHFExample";
 import UserForm from "./UserForm";
+import ToDo from "./ToDo";
+import NewToDo from "./NewToDo";
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
         <Route path="/ApiExample" element={<APIexample />} />
         <Route path="/RHFExample" element={<RHFExample />} />
         <Route path="/userForm" element={<UserForm />} />
+        <Route path="/todo" element={<ToDo />} />
+        <Route path="/newtodo" element={<NewToDo />} />
       </Route>
     </Routes>
   );
