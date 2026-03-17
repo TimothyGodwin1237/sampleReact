@@ -9,6 +9,8 @@ import RHFExample from "./RHFExample";
 import UserForm from "./UserForm";
 import ToDo from "./ToDo";
 import NewToDo from "./NewToDo";
+import ProductList from "./ProductList";
+import ProductInfo from "./ProductInfo";
 
 function App() {
   return (
@@ -22,6 +24,8 @@ function App() {
         <Route path="/userForm" element={<UserForm />} />
         <Route path="/todo" element={<ToDo />} />
         <Route path="/newtodo" element={<NewToDo />} />
+        <Route path="/prodListing" element={<ProductList />} />
+        <Route path="/prodInfo/:prodId" element={<ProductInfo />} />
       </Route>
     </Routes>
   );
