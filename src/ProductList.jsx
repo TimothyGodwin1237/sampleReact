@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./ProductList.css";
 import { useNavigate } from "react-router-dom";
+import api from "./api";
 
 const ProductList = () => {
   const navigate = useNavigate();
@@ -16,11 +17,21 @@ const ProductList = () => {
       .catch((err) => console.log("Error : ", err));
   };
 
+  const handleStudList = () => {
+    api
+      .get(`http://localhost:5000/student`)
+      .then((response) => {
+        console.log("response : ", response);
+      })
+      .catch((err) => console.log("Error : ", err));
+  };
+
   const handleProdSelect = (id) => {
     navigate(`/prodInfo/${id}`);
   };
 
   useEffect(() => {
+    handleStudList();
     handleFetchProdList();
   }, []);
 
